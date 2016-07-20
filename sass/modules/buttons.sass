@@ -1,14 +1,15 @@
 /* ////====== BUTTON STYLES =====//// */
 
 .btn
-  padding: 8px 20px
+  padding: 10px 30px
+  min-width: 110px
   border: none!important
   border-radius: $border-radius
-  min-width: 90px
   font-size: 14px!important
   transition: all .2s ease-in-out
+  font-weight: bold //temp
   @media (min-width:$screen-sm-min)
-    min-width: 100px
+    min-width: 130px
   &:hover,
   &:focus,
   &:active
@@ -17,22 +18,50 @@
     &:focus
       outline: none
   &.btn-default
-    border: 1px solid $border!important
+    border: 1px solid $text!important
+    color: $text!important
+    &:hover,
+    &:focus,
+    &:active
+      background: none
+      border-color: darken($text, 15%)!important
+      color: darken($text, 15%)!important
+  &.btn-md
+    padding: 12px 30px
+    min-width: 160px
+    @media (min-width:$screen-sm-min)
+      padding: 14px 40px
+      min-width: 180px
+      font-size: 15px!important
+  &.btn-lg
+    padding: 14px 40px
+    min-width: 180px
+    font-size: 15px!important
+    @media (min-width:$screen-sm-min)
+      padding: 18px 40px
+      min-width: 200px
+      
+  
   &.btn-bld
     font-weight: bold
   &.btn-uc
     text-transform: uppercase
-  &.btn-md
-    padding: 10px 20px
-    font-size: 14px
-    min-width: 120px
-    @media (min-width:$screen-sm-min)
-      padding: 12px 20px
-      min-width: 140px
-  &.btn-lg
-    padding: 12px 20px
-    min-width: 140px
-    @media (min-width:$screen-sm-min)
-      padding: 14px 30px
-      min-width: 160px
+  &.btn-rnd
+    border-radius: 40px!important
+
+  //custom Buttons
+  &.btn-drk
+    background: $text-drk
+    color: #fff!important
+    &:hover,
+    &:focus,
+    &:active
+      background: darken($text-drk, 5%)
+  &.btn-lt
+    background: $text-lt
+    color: #fff!important
+    &:hover,
+    &:focus,
+    &:active
+      background: darken($text-lt, 5%)
  
