@@ -1,0 +1,163 @@
+/* ////====== FORMS STYLES =====//// */
+
+.form-group
+  &.row
+    margin-left: -5px
+    margin-right: -5px
+    > div
+      padding-left: 5px
+      padding-right: 5px
+      @media (max-width:$screen-xs-max)
+        margin-bottom: 15px
+        &:last-child
+          margin-bottom: 0
+
+.form-control
+  box-shadow: none
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  &::-webkit-input-placeholder
+    color: lighten($text, 30%)
+    font-weight: 300
+  &:-moz-placeholder
+    color: lighten($text, 30%)
+    font-weight: 300
+  &::-moz-placeholder
+    color: lighten($text, 30%)
+    font-weight: 300
+  &:-ms-input-placeholder
+    color: lighten($text, 30%)
+    font-weight: 300
+  &:focus,
+  &:active
+    border-color: $primary
+    box-shadow: none
+    outline: none
+  @media (max-width:$screen-xs-min)
+    font-size: 12px
+.form-control,
+.select-control
+  border-color: $border
+  border-radius: $border-radius
+  
+input.form-control,
+select
+  height: 38px
+  @media (min-width:$screen-sm-min)
+    height: 42px
+
+label
+  font-weight: normal
+  color: darken($text, 10%)
+
+.select-caret
+  position: relative
+  display: block
+  width: 14px
+  height: 7px
+  &:before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    border-top: 7px solid $primary
+    border-left: 7px solid transparent
+    border-right: 7px solid transparent
+    border-radius: 20px
+  &:after
+    content: ""
+    position: absolute
+    top: 0
+    left: 3px
+    border-top: 4px solid #fff
+    border-left: 4px solid transparent
+    border-right: 4px solid transparent
+    
+.select-control
+  padding: 0
+  margin: 0
+  border-width: 1px
+  border-style: solid
+  overflow: hidden
+  position: relative
+  background: #fff
+  z-index: 2
+  .select-caret
+    position: absolute
+    top: 45%
+    right: 15px
+    z-index: -1
+  select
+    font-size: 14px
+    padding: 0 10px
+    width: 100%
+    color: lighten($text, 30%)
+    border: none
+    box-shadow: none
+    background-color: transparent
+    background-image: none
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    &:hover
+      cursor: pointer!important
+    &:focus,
+    &:active
+      outline: none!important
+    @media (max-width:$screen-xs-min)
+      font-size: 12px
+
+.options
+  color: #b4b4b4
+  &.options-inline
+    margin-bottom: 10px
+    @media (min-width:$screen-xs-min)
+      display: inline-block
+      margin-right: 15px
+      margin-bottom: 0
+  input
+    display: none
+  > label
+    display: inline-block
+    position: relative
+    padding-left: 24px
+    cursor: pointer
+    color: $text
+    min-height: 22px
+    &:before
+      content: ""
+      display: block
+      position: absolute
+      width: 16px
+      height: 16px
+      left: 0
+      top: 50%
+      margin-top: -9px
+      background: #fff
+      border: 1px solid $border
+      border-radius: 2px
+    &:after
+      content: ""
+      display: block
+      position: absolute
+      width: 8px
+      height: 8px
+      top: 16px
+      left: 4px
+      background: $primary
+      margin-top: -9px
+      opacity: 0
+      border-radius: 50%
+      @media (max-width:$screen-xs-min)
+        top: 15px
+  input:checked + label
+    color: $text
+    &:after
+      opacity: 1
+
+.well
+  box-shadow: none
+  border-color: $border
+  border-radius: $border-radius
+  background: lighten($text, 55%)

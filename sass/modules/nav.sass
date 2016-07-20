@@ -1,0 +1,33 @@
+/* ////====== NAV STYLES =====//// */
+
+.navbar
+  
+  .navbar-toggle
+    border-color: transparent
+    margin-top: 10px
+    margin-right: 5px
+    z-index: 99999
+    &:hover,
+    &:active,
+    &:focus
+      background: transparent
+      .icon-bar
+        background: $text
+    .icon-bar
+      background: rgba($text, 0.7)
+      border-radius: 0
+      position: relative
+      transition: all 200ms ease-in-out
+    &.active
+      .icon-bar
+        &:nth-child(1)
+          background: $text
+          top: 6px
+          transform: rotate(45deg)
+        &:nth-child(2)
+          background: $text
+          background-color: transparent
+        &:nth-child(3)
+          background: $text
+          top: -6px
+          transform: rotate(-45deg)
