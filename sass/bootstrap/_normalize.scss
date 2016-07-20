@@ -1,4 +1,4 @@
-/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+// normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css
 
 //
 // 1. Set default font family to sans-serif.
@@ -95,13 +95,9 @@ a {
 // active/hover state.
 //
 
-a {
-  &:active {
-    outline: 0;
-  }
-  &:hover {
-    outline: 0;
-  }
+a:active,
+a:hover {
+  outline: 0;
 }
 
 // Text-level semantics
